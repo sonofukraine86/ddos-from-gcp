@@ -30,7 +30,7 @@ variable "proxy_file_url" {
 
 variable "sonofukraine_count" {
   type    = number
-  default = 1
+  default = 10
 }
 
 variable "ddoser_concurency" {

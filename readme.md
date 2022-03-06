@@ -25,4 +25,8 @@ Next you can run the
 ```bash
 terraform apply -auto-approve -target="random_shuffle.zone"
 terraform apply -auto-approve -target="random_shuffle.region"
-terraform apply -auto-approve```
+terraform apply -auto-approve
+```
+
+You can find the ddos command to be executed in the `/root/command.sh` file.
+The log is being recorded into the `/var/log/ddoser.log`
