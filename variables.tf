@@ -37,3 +37,4 @@ variable "ddoser_concurency" {
   type = string
   default = "500"
 }
+

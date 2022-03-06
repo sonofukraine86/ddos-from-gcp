@@ -1,5 +1,21 @@
-provider "google" {}
+resource "random_shuffle" "region" {
+  input        = ["us-west1", "europe-west3"]
+  result_count = 1
+}
 
+resource "random_shuffle" "zone" {
+  input        = ["a","b","c"]
+  result_count = 1
+}
+
+output "zone" {
+    value = "${join(",", random_shuffle.region.result)}-${join(",", random_shuffle.zone.result)}"
+}
+
+provider "google" {
+    region      = join(",", random_shuffle.region.result)
+    zone      = "${join(",", random_shuffle.region.result)}-${join(",", random_shuffle.zone.result)}"
+}
 
 resource "google_compute_instance" "default" {
   count        = var.sonofukraine_count
